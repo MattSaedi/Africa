@@ -17,6 +17,10 @@ struct GalleryView: View {
 // MARK: - PREVIEW
 struct GalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryView()
+        ScrollView(.vertical,showsIndicators:false) {
+            GalleryView()
+        }//: SCROLL
+        .frame(maxWidth:.infinity,maxHeight: .infinity)
+        .background(MotionAnimationView())
     }
 }
